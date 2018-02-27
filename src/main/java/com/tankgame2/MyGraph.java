@@ -1,4 +1,4 @@
-/*
+package com.tankgame2;/*
  * Class MyGraph to draw Tank
  * @author Yunqi Cui
  * 27/02/2018

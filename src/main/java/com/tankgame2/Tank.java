@@ -1,4 +1,4 @@
-/*
+package com.tankgame2;/*
  * Class Tank
  * @author Yunqi Cui
  * 27/02/2018

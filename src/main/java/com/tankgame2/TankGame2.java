@@ -1,23 +1,26 @@
-/*
+package com.tankgame2;/*
  * TankGame Version1
  * @author Yunqi Cui
  * 27/02/2018
+ * @version 1.0
  */
 
 
+import com.tankgame1.MyGraph;
+
 import javax.swing.*;
 
-public class TankGame1 extends JFrame {
+public class TankGame2 extends JFrame {
 
     MyGraph mg = new MyGraph();
 
     public static void main(String[] args) {
 
-        TankGame1 tg1 = new TankGame1();
+        TankGame2 tg2 = new TankGame2();
 
     }
 
-    public TankGame1() {
+    public TankGame2() {
 
         this.add(mg);
         this.setTitle("Tank Game");
