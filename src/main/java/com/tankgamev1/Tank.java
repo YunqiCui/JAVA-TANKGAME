@@ -1,4 +1,4 @@
-/*
+package com.tankgamev1;/*
  * Class Tank
  * @author Yunqi Cui
  * 27/02/2018
@@ -8,7 +8,15 @@
 public class Tank {
 
     //Tank Position
-    private int x;
+    public int x;
+    public int y;
+    public int type;
+
+
+    public Tank(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
 
     public int getX() {
         return x;
@@ -26,10 +34,14 @@ public class Tank {
         this.y = y;
     }
 
-    private int y;
-
-    public Tank(int x,int y){
-        this.x = x;
-        this.y = y;
+    public int getType() {
+        return type;
     }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+
+
 }
