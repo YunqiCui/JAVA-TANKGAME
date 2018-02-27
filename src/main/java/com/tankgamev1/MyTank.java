@@ -20,7 +20,7 @@ public class MyTank extends JPanel implements KeyListener {
         pt = new PlayerTank(100, 100);
         x=pt.getX();
         y=pt.getY();
-        this.pt.setType(0);
+        this.pt.setType(1);
     }
 
     public void paint(Graphics g) {
