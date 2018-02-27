@@ -7,13 +7,19 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class MyGraph extends JPanel {
+public class MyGraph extends JPanel implements KeyListener {
 
     private PlayerTank pt;
+    int x=0;
+    int y=0;
 
     public MyGraph() {
         pt = new PlayerTank(10, 10);
+        x=pt.getX();
+        y=pt.getY();
     }
 
     public void paint(Graphics g) {
@@ -49,10 +55,39 @@ public class MyGraph extends JPanel {
                 //Circle
                 g.fillOval(x + 7, y + 10, 6, 10);
                 //Line
-                g.drawLine(x + 10, y + 15, 20, 10);
+                g.drawLine(x + 10, y + 15, x+10, y);
 
         }
     }
 
 
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    public void keyPressed(KeyEvent e) {
+
+
+        if(e.getKeyCode()==KeyEvent.VK_DOWN){
+            System.out.println("Down");
+            pt.setY(y+=5);
+        }else if(e.getKeyCode()==KeyEvent.VK_UP){
+            System.out.println("Up");
+            pt.setY(y-=5);
+        }else if(e.getKeyCode()==KeyEvent.VK_LEFT){
+            System.out.println("Left");
+            pt.setX(x-=5);
+        }else if(e.getKeyCode()==KeyEvent.VK_RIGHT){
+            System.out.println("Right");
+            pt.setX(x+=5);
+        }else{
+            System.out.println("Not a direction key");
+        }
+        this.repaint();
+
+    }
+
+    public void keyReleased(KeyEvent e) {
+
+    }
 }
