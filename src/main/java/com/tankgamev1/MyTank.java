@@ -54,7 +54,7 @@ public class MyTank extends JPanel implements KeyListener {
                 //Right Rectangular
                 g.fill3DRect(x + 15, y, 5, 30, false);
                 //Circle
-                g.fillOval(x + 5, y + 10, 10, 10);
+                g.fillOval(x + 7, y + 10, 6, 10);
                 //UpLine
                 g.drawLine(x + 10, y + 15, x+10, y);
                 break;
@@ -67,7 +67,7 @@ public class MyTank extends JPanel implements KeyListener {
                 //Down Rectangular
                 g.fill3DRect(x, y+15, 30, 5, false);
                 //Circle
-                g.fillOval(x + 10, y + 5, 10, 10);
+                g.fillOval(x + 10, y + 7, 10, 6);
                 //RightLine
                 g.drawLine(x + 15, y + 10, x+30, y+10);
                 break;
@@ -80,7 +80,7 @@ public class MyTank extends JPanel implements KeyListener {
                 //Right Rectangular
                 g.fill3DRect(x + 15, y, 5, 30, false);
                 //Circle
-                g.fillOval(x + 5, y + 10, 10, 10);
+                g.fillOval(x + 7, y + 10, 6, 10);
                 //DownLine
                 g.drawLine(x + 10, y + 15, x+10, y+30);
                 break;
@@ -93,7 +93,7 @@ public class MyTank extends JPanel implements KeyListener {
                 //Down Rectangular
                 g.fill3DRect(x, y+15, 30, 5, false);
                 //Circle
-                g.fillOval(x + 10, y + 5, 10, 10);
+                g.fillOval(x + 10, y + 7, 10, 6);
                 //LeftLine
                 g.drawLine(x + 15, y + 10, x, y+10);
                 break;
