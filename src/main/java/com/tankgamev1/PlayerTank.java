@@ -8,43 +8,31 @@ package com.tankgamev1;/*
 public class PlayerTank extends Tank{
 
     //up:0 right:1 down:2 left:3
-    private int direct=0;
-    private int speed=5;
+
+
 
     public PlayerTank(int x, int y) {
         super(x, y);
+        this.setDirect(0);
+        this.setSpeed(5);
+        this.setType(1);
     }
 
-    public int getDirect() {
-        return direct;
-    }
-
-    public void setDirect(int direct) {
-        this.direct = direct;
-    }
-
-    public int getSpeed(){
-        return speed;
-    }
-
-    public void setSpeed(int speed){
-        this.speed = speed;
-    }
 
     public void moveUp(){
-        this.y-=speed;
+        this.y-=this.getSpeed();
     }
 
     public void moveRight(){
-        this.x+=speed;
+        this.x+=this.getSpeed();
     }
 
     public void moveDown(){
-        this.y+=speed;
+        this.y+=this.getSpeed();
     }
 
     public void moveLeft(){
-        this.x-=speed;
+        this.x-=this.getSpeed();
     }
 
 }

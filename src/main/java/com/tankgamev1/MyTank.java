@@ -9,31 +9,47 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Vector;
 
 public class MyTank extends JPanel implements KeyListener {
 
     private PlayerTank pt;
+    private Vector<EnemyTank> etv = new Vector<EnemyTank>();
+    int enemySize =3;
     public int x=0;
     public int y=0;
 
     public MyTank() {
         pt = new PlayerTank(100, 100);
+
+        for (int i = 0; i < enemySize; i++) {
+            EnemyTank et = new EnemyTank((i+1)*50,0);
+            et.setType(0);
+            etv.add(et);
+        }
+
         x=pt.getX();
         y=pt.getY();
-        this.pt.setType(1);
     }
 
     public void paint(Graphics g) {
 
         super.paint(g);
         this.drawGameField(g);
+        //draw Player Tank
         this.drawTank(pt.getX(), pt.getY(), g, pt.getDirect(), pt.getType());
+        //draw Enemy Tank
+        for (int i = 0; i <enemySize ; i++) {
+            this.drawTank(etv.get(i).getX(),etv.get(i).getY(),g,etv.get(i).getDirect(),etv.get(i).getType());
+        }
     }
 
     public void drawGameField(Graphics g) {
         g.fillRect(0, 0, 400, 300);
     }
 
+
+    //Draw Tank Function
     public void drawTank(int x, int y, Graphics g, int direct, int type) {
         //Tpye of Tank
         switch (type) {
@@ -104,7 +120,7 @@ public class MyTank extends JPanel implements KeyListener {
     public void keyTyped(KeyEvent e) {
 
     }
-
+    //Move Tank by Keyboard
     public void keyPressed(KeyEvent e) {
 
 

@@ -11,6 +11,8 @@ public class Tank {
     public int x;
     public int y;
     public int type;
+    public int direct;
+    public int speed;
 
 
     public Tank(int x,int y){
@@ -42,6 +44,20 @@ public class Tank {
         this.type = type;
     }
 
+    public int getDirect() {
+        return direct;
+    }
 
+    public void setDirect(int direct) {
+        this.direct = direct;
+    }
+
+    public int getSpeed(){
+        return speed;
+    }
+
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
 
 }

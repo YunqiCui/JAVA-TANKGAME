@@ -7,17 +7,17 @@ package com.tankgamev1;/*
 
 import javax.swing.*;
 
-public class TankGame1 extends JFrame {
+public class TankGame extends JFrame {
 
     MyTank mtk = new MyTank();
 
     public static void main(String[] args) {
 
-        TankGame1 tg1 = new TankGame1();
+        TankGame tg1 = new TankGame();
 
     }
 
-    public TankGame1() {
+    public TankGame() {
 
         this.add(mtk);
         this.setTitle("Tank Game");
