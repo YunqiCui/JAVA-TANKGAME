@@ -124,22 +124,23 @@ public class MyTank extends JPanel implements KeyListener {
     public void keyPressed(KeyEvent e) {
 
 
-        if(e.getKeyCode()==KeyEvent.VK_UP || e.getKeyCode()==KeyEvent.VK_W){
+        if(e.getKeyCode()==KeyEvent.VK_UP
+                ){
 
             pt.setDirect(0);
             pt.moveUp();
 
-            }else if(e.getKeyCode()==KeyEvent.VK_RIGHT || e.getKeyCode()==KeyEvent.VK_D ){
+            }else if(e.getKeyCode()==KeyEvent.VK_RIGHT){
 
             pt.setDirect(1);
             pt.moveRight();
 
-        }else if(e.getKeyCode()==KeyEvent.VK_DOWN || e.getKeyCode()==KeyEvent.VK_S){
+        }else if(e.getKeyCode()==KeyEvent.VK_DOWN){
 
             pt.setDirect(2);
             pt.moveDown();
 
-        }else if(e.getKeyCode()==KeyEvent.VK_LEFT || e.getKeyCode()==KeyEvent.VK_A){
+        }else if(e.getKeyCode()==KeyEvent.VK_LEFT){
 
             pt.setDirect(3);
             pt.moveLeft();
